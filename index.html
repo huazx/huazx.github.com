@@ -35,9 +35,14 @@
 </p>
 <p><img src="/Jolokia/reference/images/jolokia_logo.png" align="right" /></p>
 <pre><code>
-$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+$ tar zxvf apache-tomcat-7.*.tar.gz 
+$ cd apache-tomcat-7.*
+$ TC=`pwd`
+$ cd $TC/webapps
+$ wget \ 
+http://labs.consol.de/maven/repository/org/jolokia/jolokia-war/1.0.0/jolokia-war-1.0.0.war
+$ mv jolokia-war-1.0.0.war jolokia.war
+$ $TC/bin/catalina.sh start
 </code></pre>
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
